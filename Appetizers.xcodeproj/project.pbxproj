@@ -23,6 +23,9 @@
 		B1CD9F7B2C134565006A021A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD9F7A2C134564006A021A /* LoadingView.swift */; };
 		B1CD9F7D2C134764006A021A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD9F7C2C134764006A021A /* Color+Ext.swift */; };
 		B1CD9F7F2C14D500006A021A /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD9F7E2C14D500006A021A /* RemoteImage.swift */; };
+		B1CD9F8F2C14F3DE006A021A /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD9F8E2C14F3DE006A021A /* AppetizerDetailView.swift */; };
+		B1CD9F942C172C13006A021A /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD9F932C172C13006A021A /* APButton.swift */; };
+		B1CD9F962C172D09006A021A /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CD9F952C172D09006A021A /* XDismissButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		B1CD9F7A2C134564006A021A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B1CD9F7C2C134764006A021A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		B1CD9F7E2C14D500006A021A /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		B1CD9F8E2C14F3DE006A021A /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
+		B1CD9F932C172C13006A021A /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		B1CD9F952C172D09006A021A /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 			children = (
 				B1CD9F762C107F5F006A021A /* AppetizerListViewModel.swift */,
 				B1CD9F682C0F5BEB006A021A /* AppetizerListView.swift */,
+				B1CD9F8E2C14F3DE006A021A /* AppetizerDetailView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 		B1CD9F892C14DA06006A021A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1CD9F922C172C01006A021A /* Buttons */,
 				B1CD9F8C2C14DA2C006A021A /* Image */,
 				B1CD9F8B2C14DA25006A021A /* Cells */,
 				B1CD9F8A2C14DA0D006A021A /* UIKitComponents */,
@@ -205,6 +213,15 @@
 				B1CD9F722C0FD4AD006A021A /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		B1CD9F922C172C01006A021A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B1CD9F932C172C13006A021A /* APButton.swift */,
+				B1CD9F952C172D09006A021A /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,14 +296,17 @@
 			files = (
 				B1CD9F6F2C0F6439006A021A /* Appetizer.swift in Sources */,
 				B1CD9F772C107F5F006A021A /* AppetizerListViewModel.swift in Sources */,
+				B1CD9F962C172D09006A021A /* XDismissButton.swift in Sources */,
 				B1CD9F752C0FDC39006A021A /* APError.swift in Sources */,
 				B1CD9F712C0F73BF006A021A /* AppetizerListCell.swift in Sources */,
 				B1CD9F7D2C134764006A021A /* Color+Ext.swift in Sources */,
 				B1CD9F6B2C0F5BFC006A021A /* AccountView.swift in Sources */,
+				B1CD9F942C172C13006A021A /* APButton.swift in Sources */,
 				B1CD9F7B2C134565006A021A /* LoadingView.swift in Sources */,
 				B1CD9F5D2C0F5B35006A021A /* AppetizerTabView.swift in Sources */,
 				B1CD9F732C0FD4AD006A021A /* NetworkManager.swift in Sources */,
 				B1CD9F7F2C14D500006A021A /* RemoteImage.swift in Sources */,
+				B1CD9F8F2C14F3DE006A021A /* AppetizerDetailView.swift in Sources */,
 				B1CD9F5B2C0F5B35006A021A /* AppetizersApp.swift in Sources */,
 				B1CD9F792C1081BA006A021A /* Alert.swift in Sources */,
 				B1CD9F692C0F5BEB006A021A /* AppetizerListView.swift in Sources */,

@@ -53,7 +53,7 @@ final class NetworkManager{
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey){
-            completed(nil)
+            completed(image)
             return
         }
         guard let url = URL(string: urlString) else{
