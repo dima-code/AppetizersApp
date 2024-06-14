@@ -10,7 +10,7 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject var viewModel = AccountViewModel()
-    
+    @FocusState private var nameIsFocused: Bool
 
     var body: some View {
         NavigationView{
@@ -18,21 +18,31 @@ struct AccountView: View {
                 Section(header: Text("Personal Info")){
                     TextField("First Name", text: $viewModel.user.firstName)
                         .disableAutocorrection(true)
+                        .focused($nameIsFocused)
+                    
                     TextField("Last Name Name", text: $viewModel.user.lastName)
                         .disableAutocorrection(true)
+                        .focused($nameIsFocused)
+                    
                     TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    DatePicker("Birthday", 
+                        .focused($nameIsFocused)
+                    
+                    DatePicker("Birthday",
                                selection: $viewModel.user.birthdate,
                                displayedComponents: .date)
+                    
                     Button{
+                        nameIsFocused = false
                         viewModel.saveChanges()
+
                     } label: {
                         Text("Save Changes")
                     }
                 }
+                
                 Section(header: Text("Requests")){
                     Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
                     Toggle("Frequent Refills", isOn: $viewModel.user.frequentRefills)
@@ -40,6 +50,7 @@ struct AccountView: View {
                 .toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
 
             }
+
             .navigationTitle("🤖 Account")
             }
         .onAppear{
